@@ -92,6 +92,11 @@ export default function ContactPage() {
               <option value="USA">USA</option>
               <option value="UK">UK</option>
               <option value="Europe">Europe</option>
+              <option value="Africa">Africa</option>
+              <option value="Australia">Australia</option>
+              <option value="UAE">UAE</option>
+              <option value="Asia">Asia</option>
+              <option value="Other">Other</option>
             </select>
             <textarea
               name="project"

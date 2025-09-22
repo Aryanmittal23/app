@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { ChevronDown } from "lucide-react"
 import { ArrowRight, Star } from "lucide-react";
 
 export default function Home() {

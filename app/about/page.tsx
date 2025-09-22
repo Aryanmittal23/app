@@ -14,6 +14,31 @@ export default function AboutPage() {
         </button>
       </section>
 
+      {/* Founder’s Message */}
+<section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+  {/* Message Text */}
+  <div className="md:w-1/2">
+    <h2 className="text-3xl font-bold mb-4">Message from Our Founder</h2>
+    <p className="text-gray-700 mb-4">
+      At Marmilix, our journey has always been about combining traditional craftsmanship with
+      modern innovation. We strive to deliver the highest quality natural stones to clients
+      around the world while preserving the beauty and authenticity of each piece.
+    </p>
+    <p className="text-gray-700">
+      – Aryan Mittal, Founder
+    </p>
+  </div>
+
+  {/* Video */}
+  <div className="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+    <video
+      src="/founder-message.mp4"
+      controls
+      className="w-full h-auto rounded-lg"
+    />
+  </div>
+</section>
+
        {/* Story of Excellence */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-6">Our Story of Excellence</h2>
