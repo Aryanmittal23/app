@@ -137,14 +137,15 @@ export default function ContactPage() {
       <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6">
         <div className="rounded-lg overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14227.514985169558!2d73.0289!3d26.2389"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.4671779472313!2d78.7494827750881!3d25.66846458363269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981a9055e272d7f%3A0x4200e1263c7246a3!2sSheopur%2C%20Madhya%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1695379162920!5m2!1sen!2sin"
             width="100%"
             height="350"
             allowFullScreen
             loading="lazy"
-          />
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <div>
+      <div>
           <h2 className="text-2xl font-bold mb-4">Why Visit Our Showroom?</h2>
           <ul className="space-y-3 text-gray-700">
             <li>✅ Touch & Feel Quality</li>
@@ -152,9 +153,11 @@ export default function ContactPage() {
             <li>✅ Facility Tour</li>
             <li>✅ Custom Solutions</li>
           </ul>
+          <a href="https://www.google.com/maps?q=Sheopur,+Madhya+Pradesh,+India" className="text-black">
           <button className="mt-6 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800">
             Get Directions
           </button>
+          </a>
         </div>
       </section>
 

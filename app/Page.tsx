@@ -2,8 +2,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
-import Navbar from "./components/Navbar"
+import { ArrowRight, Star } from "lucide-react";
 
 export default function Home() {
   const stats = [
@@ -37,12 +36,10 @@ export default function Home() {
     },
   ]
   return (
-    <div className="min-h-screen"> 
-            {/* <Navbar /> */}
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="min-h-screen">
+      {/* <section className="relative min-h-screen flex items-center justify-center overflow-hidden"> */}
         {/* Background Image */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <Image
             src="/heroBackground.jpeg"
             alt="Premium marble texture background"
@@ -51,12 +48,12 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-black/60"></div>
-        </div>
+        </div> */}
 
-        {/* Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+        
+        {/* <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            {/* Badge */}
+            
             <motion.div
               className="inline-block mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -68,7 +65,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Main Headline */}
+            
             <motion.h1
               className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
@@ -79,7 +76,7 @@ export default function Home() {
               <div className="text-amber-400">Marble & Granite</div>
             </motion.h1>
 
-            {/* Description */}
+            
             <motion.p
               className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +87,7 @@ export default function Home() {
               excellence that transcends ordinary surfaces.
             </motion.p>
 
-            {/* CTA Buttons */}
+            
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
               initial={{ opacity: 0, y: 20 }}
@@ -105,10 +102,10 @@ export default function Home() {
               </button>
             </motion.div>
           </motion.div>
-        </div>
+        </div> */}
 
-        {/* Stats Bar */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-gray-800">
+        
+        {/* <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-gray-800">
           <div className="max-w-7xl mx-auto px-4 py-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -125,8 +122,83 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div> */}
+
+<section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden mt-15"
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/heroBackground.jpeg" // make sure this image is in /public folder
+          alt="Luxury marble kitchen countertop"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <div className="max-w-4xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <Star className="h-4 w-4 text-yellow-400 fill-current" />
+            <span className="text-sm">Premium Quality Since 1985</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6 tracking-tight">
+            World-Class{" "}
+            <span className="text-yellow-400">Marble</span> &{" "}
+            <span className="text-yellow-400">Granite</span>
+            <br />
+            for Global Projects
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+            Transform your spaces with our premium natural stones. From luxury
+            residences to commercial landmarks, we deliver excellence across
+            40+ countries worldwide.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/products">
+            <button className="flex items-center px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition text-lg">
+              Explore Our Collection
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            </Link>
+            <Link href="/contact">
+            <button className="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition text-lg">
+              Request Consultation
+            </button>
+            </Link>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/20">
+            <div>
+              <div className="text-3xl mb-2">40+</div>
+              <div className="text-sm text-gray-300">Countries Served</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">5000+</div>
+              <div className="text-sm text-gray-300">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">35</div>
+              <div className="text-sm text-gray-300">Years Experience</div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+      {/* </section> */}
       {/* Featured Products Section */}
       <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
@@ -165,8 +237,9 @@ export default function Home() {
                 Get Quote
               </button>
                 </Link>
-              
+              <Link href="/products">
               <button className="text-gray-700 underline">View Catalog</button>
+              </Link>
             </div>
             </div>
           ))}
@@ -174,9 +247,11 @@ export default function Home() {
           {/* View All Button */ }
       </div>
       <div className="flex justify-center mt-10">
+        <Link href="/products">
           <button className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700">
             View All Products
           </button>
+          </Link>
         </div>
     </section>
         
@@ -213,9 +288,11 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <Link href="/about">
           <button className="mt-8 px-5 py-3 border rounded-lg hover:bg-gray-100">
             Learn More About Us
           </button>
+          </Link>
         </div>
         <div>
           <Image
@@ -263,13 +340,11 @@ export default function Home() {
               Get Your Quote Today
             </button>
             </Link>
-            <button className="px-6 py-3 border rounded-lg hover:bg-gray-100 text-gray-900 bg-white">
-              Download Catalog
-            </button>
           </div>
         </div>
       </section>
    
+    
     </div>
   )
 }

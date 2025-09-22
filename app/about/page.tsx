@@ -139,9 +139,11 @@ export default function AboutPage() {
           premium natural stone needs.
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-yellow-600 text-white px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition">
-            Start Your Project
-          </button>
+          <Link href="/contact">
+            <button className="bg-yellow-600 text-white px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition">
+              Start Your Project
+            </button>
+          </Link>
           <Link href="/products">
           <button className="border border-gray-400 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
             View Our Products
