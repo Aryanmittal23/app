@@ -81,7 +81,7 @@ export default function Footer() {
   };
   return (
     <footer className="bg-white text-black">
-      <section className="py-16 bg-neutral-50 relative">
+      <section className="py-16 bg-neutral-100 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"

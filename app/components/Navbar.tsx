@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Products", href: "/products" },
     { name: "Blog", href: "/blog" },
     { name: "Visualizer", href: "/visualizer" },
@@ -24,7 +24,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-lg">
         <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -47,13 +47,13 @@ export default function Navbar() {
                 className="text-gray-800 hover:text-black-600 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
               >
                 {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
+                <span className="absolute inset-x-0 bottom-0 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
               </Link>
             ))}
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <Link href="/contact">
               <motion.button
                 className="bg-green-600 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-green-700 transition-colors shadow-md"
@@ -63,7 +63,7 @@ export default function Navbar() {
                 Get Quote
               </motion.button>
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="lg:hidden">

@@ -1,27 +1,49 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation" 
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+// import { CountryDropdown } from "react-country-dropdown";
+// import "react-country-dropdown/dist/index.css";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({
+   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    company: "",
     country: "",
     project: "",
-  });
-
+    consent: false,
+  })
+const router = useRouter()
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form Data:", form);
-    alert("Message sent successfully!");
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const oldForm={...form};
 
+        setForm({ name: "", email: "", phone: "", country: "", project: "" ,consent:false})
+        router.push("/thank-you")
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbzmMQt5Vh3M7v-5lXeKrJIhcz2IqkmkkH4HIGuXNVvrwvTe6CGMMV1oHr1gI90AQUd8xg/exec", {
+  method: "POST",
+  mode: "no-cors", // important for Google Apps Script
+  body: JSON.stringify(oldForm),
+  headers: {
+    "Content-Type": "application/json",
+  },
+      })
+
+      // if (response.ok) {
+          
+      } catch (error) {
+      console.error("Error:", error)
+      alert("Something went wrong!")
+    }
+  }
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -47,7 +69,7 @@ export default function ContactPage() {
               <input
                 type="text"
                 name="name"
-                placeholder="Full Name *"
+                placeholder="Name *"
                 value={form.name}
                 onChange={handleChange}
                 required
@@ -63,41 +85,38 @@ export default function ContactPage() {
                 className="w-full border rounded-lg px-4 py-2"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2"
-              />
-              {/* <input
-                type="text"
-                name="company"
-                placeholder="Company Name"
-                value={form.company}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2"
-              /> */}
-            </div>
-            <select
-              name="country"
+            {/* Phone Input with Country Code */}
+            <PhoneInput
+              country={"in"} // default India
+              value={form.phone}
+              onChange={(phone) => setForm({ ...form, phone })}
+              inputStyle={{ width: "100%" }}
+              containerClass="rounded-lg"
+              inputClass="w-full border rounded-lg px-4 py-2"
+            />
+
+            {/* Country Dropdown */}
+            {/* <CountryDropdown
               value={form.country}
-              onChange={handleChange}
               className="w-full border rounded-lg px-4 py-2"
-            >
-              <option value="">Select your country</option>
-              <option value="India">India</option>
-              <option value="USA">USA</option>
-              <option value="UK">UK</option>
-              <option value="Europe">Europe</option>
-              <option value="Africa">Africa</option>
-              <option value="Australia">Australia</option>
-              <option value="UAE">UAE</option>
-              <option value="Asia">Asia</option>
-              <option value="Other">Other</option>
-            </select>
+              preferredCountries={["in", "us", "gb"]}
+              handleChange={(val) => setForm({ ...form, country: val })}
+            /> */}
+
+            {/* Consent */}
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                name="consent"
+                checked={form.consent}
+                onChange={handleChange}
+                className="w-4 h-4"
+                required
+              />
+              <span className="text-gray-600 text-sm">
+                I agree to be contacted via phone and email
+              </span>
+            </label>
             <textarea
               name="project"
               placeholder="Project Details *"
@@ -194,4 +213,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-}
+  }

@@ -2,8 +2,9 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
 import { ArrowRight, Star } from "lucide-react";
+import { Shield, Gem, Globe, Users } from "lucide-react";
+
 
 export default function Home() {
   const stats = [
@@ -36,95 +37,31 @@ export default function Home() {
       image: "/Premium-marble.jpeg", // replace with your image path
     },
   ]
+const features = [
+    {
+      icon: <Shield className="w-10 h-10 text-yellow-600" />,
+      title: "Trusted Quality",
+      desc: "We deliver premium marble & granite with strict quality standards for every project.",
+    },
+    {
+      icon: <Gem className="w-10 h-10 text-yellow-600" />,
+      title: "Unique Designs",
+      desc: "Exclusive stone patterns & textures that add unmatched beauty to your spaces.",
+    },
+    {
+      icon: <Globe className="w-10 h-10 text-yellow-600" />,
+      title: "Global Reach",
+      desc: "Supplying our products across India and worldwide with reliable logistics.",
+    },
+    {
+      icon: <Users className="w-10 h-10 text-yellow-600" />,
+      title: "Client Focused",
+      desc: "We believe in long-term relationships and provide personalized solutions.",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
-      {/* <section className="relative min-h-screen flex items-center justify-center overflow-hidden"> */}
-        {/* Background Image */}
-        {/* <div className="absolute inset-0">
-          <Image
-            src="/heroBackground.jpeg"
-            alt="Premium marble texture background"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div> */}
-
-        
-        {/* <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            
-            <motion.div
-              className="inline-block mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="bg-amber-600/20 border border-amber-600/30 rounded-full px-6 py-2">
-                <span className="text-amber-400 text-sm font-medium">Beyond a Surface</span>
-              </div>
-            </motion.div>
-
-            
-            <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <div className="text-gray-200 mb-2">Premium Indian</div>
-              <div className="text-amber-400">Marble & Granite</div>
-            </motion.h1>
-
-            
-            <motion.p
-              className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              Discover the timeless elegance of Indian natural stones. From quarry to your doorstep, we deliver
-              excellence that transcends ordinary surfaces.
-            </motion.p>
-
-            
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <button className="bg-amber-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-amber-700 transition-colors">
-                Explore Our Collection
-              </button>
-              <button className="border-2 border-gray-400 text-gray-300 px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-800 hover:border-gray-300 transition-colors">
-                Download Catalog
-              </button>
-            </motion.div>
-          </motion.div>
-        </div> */}
-
-        
-        {/* <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-1">{stat.number}</div>
-                  <div className="text-gray-400 text-sm font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div> */}
-
 <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden mt-15"
@@ -200,6 +137,55 @@ export default function Home() {
     </section>
 
       {/* </section> */}
+
+<section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900">
+            Our Heritage of Excellence
+          </h2>
+          <p className="text-lg text-gray-600 mt-2">
+            Three Decades of Stone Mastery
+          </p>
+          <div className="mt-6 space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="bg-yellow-500 text-white font-bold px-3 py-1 rounded-lg">
+                30+
+              </span>
+              <p className="text-gray-700">
+                <strong>Rich Heritage</strong> – Since 1990, Marmilix has been at
+                the forefront of Indian natural stone exports, combining
+                traditional craftsmanship with modern technology.
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="bg-gray-900 text-white font-bold px-3 py-1 rounded-lg">
+                40+
+              </span>
+              <p className="text-gray-700">
+                <strong>Global Trust</strong> – Serving clients across 40+
+                countries with unwavering commitment to quality, authenticity,
+                and timely delivery.
+              </p>
+            </div>
+          </div>
+          <Link href="/about">
+          <button className="mt-8 px-5 py-3 border rounded-lg hover:bg-gray-100">
+            Learn More About Us
+          </button>
+          </Link>
+        </div>
+        <div>
+          <Image
+            src="/Luxury-Private-Residence.jpeg"
+            alt="Luxury Private Residence"
+            width={600}
+            height={400}
+            className="rounded-2xl shadow-lg"
+          />
+        </div>
+      </section>
+
+
       {/* Featured Products Section */}
       <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
@@ -259,52 +245,29 @@ export default function Home() {
       
 
       {/* Heritage Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900">
-            Our Heritage of Excellence
-          </h2>
-          <p className="text-lg text-gray-600 mt-2">
-            Three Decades of Stone Mastery
-          </p>
-          <div className="mt-6 space-y-6">
-            <div className="flex items-start gap-4">
-              <span className="bg-yellow-500 text-white font-bold px-3 py-1 rounded-lg">
-                30+
-              </span>
-              <p className="text-gray-700">
-                <strong>Rich Heritage</strong> – Since 1990, Marmilix has been at
-                the forefront of Indian natural stone exports, combining
-                traditional craftsmanship with modern technology.
-              </p>
+      
+
+      <section className="bg-gray-50 py-16 px-6">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
+        <p className="text-gray-600 mb-12">
+          Discover what makes <span className="font-semibold">Marmilix</span> your trusted partner in marble & granite solutions.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+            >
+              <div className="flex justify-center mb-4">{feature.icon}</div>
+              <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
+              <p className="text-gray-600 text-sm">{feature.desc}</p>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="bg-gray-900 text-white font-bold px-3 py-1 rounded-lg">
-                40+
-              </span>
-              <p className="text-gray-700">
-                <strong>Global Trust</strong> – Serving clients across 40+
-                countries with unwavering commitment to quality, authenticity,
-                and timely delivery.
-              </p>
-            </div>
-          </div>
-          <Link href="/about">
-          <button className="mt-8 px-5 py-3 border rounded-lg hover:bg-gray-100">
-            Learn More About Us
-          </button>
-          </Link>
+          ))}
         </div>
-        <div>
-          <Image
-            src="/Luxury-Private-Residence.jpeg"
-            alt="Luxury Private Residence"
-            width={600}
-            height={400}
-            className="rounded-2xl shadow-lg"
-          />
-        </div>
-      </section>
+      </div>
+    </section>
 
       {/* Stats + CTA Section */}
       <section className="bg-gray-900 text-white py-16">
