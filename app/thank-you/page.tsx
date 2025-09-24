@@ -14,7 +14,7 @@ export default function ThankYouPage() {
         <h1 className="text-3xl font-bold text-green-600 mb-4">🎉 Thank You!</h1>
         <p className="text-gray-700 text-lg">
           Your form has been submitted successfully. <br />
-          We will connect with you within <span className="font-semibold">24–48 hours</span>.
+          We will connect with you within <span className="font-semibold">12–24 hours</span>.
         </p>
 
         <div className="mt-6">

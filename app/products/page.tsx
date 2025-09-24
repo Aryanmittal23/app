@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link"
 
 const products = [
   {
@@ -29,7 +30,7 @@ const products = [
     id: 4,
     name: "Kashmir Black Granite",
     category: "Granite",
-    image: "/products/kashmir.jpg",
+    image: "/Exotic-granite.jpeg",
     applications: "Kitchen Countertops, Flooring",
   },
   {
@@ -99,33 +100,60 @@ export default function ProductsPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {filteredProducts.map((p) => (
+            // <div
+            //   key={p.id}
+            //   className="border rounded-lg shadow-sm overflow-hidden bg-white"
+            // >
+            //   <div className="relative h-48">
+            //     <Image
+            //       src={p.image}
+            //       alt={p.name}
+            //       fill
+            //       className="object-cover"
+            //     />
+            //     <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
+            //       {p.category.toUpperCase()}
+            //     </span>
+            //   </div>
+            //   <div className="p-4">
+            //     <h3 className="font-semibold text-lg">{p.name}</h3>
+            //     <p className="text-sm text-gray-600 mt-2">{p.applications}</p>
+            //     <div className="flex justify-between mt-4">
+            //       <Link href="/contact">
+            //     <button className="px-7 py-2 border rounded-lg hover:bg-gray-100 ml-5">
+            //     Get Quote
+            //   </button>
+            //     </Link>
+            //       <button className="px-3 py-2 border rounded text-sm">
+            //         View Details
+            //       </button>
+            //     </div>
+            //   </div>
+            // </div>
             <div
               key={p.id}
-              className="border rounded-lg shadow-sm overflow-hidden bg-white"
+              className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
             >
-              <div className="relative h-48">
+              <div className="relative w-full h-56">
                 <Image
                   src={p.image}
                   alt={p.name}
                   fill
                   className="object-cover"
                 />
-                <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
-                  {p.category.toUpperCase()}
+                <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg">
+                  {p.category}
                 </span>
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg">{p.name}</h3>
-                <p className="text-sm text-gray-600 mt-2">{p.applications}</p>
-                <div className="flex justify-between mt-4">
-                  <button className="px-3 py-2 bg-black text-white rounded text-sm">
-                    Get Quote
-                  </button>
-                  <button className="px-3 py-2 border rounded text-sm">
-                    View Catalog
-                  </button>
-                </div>
+              <div className="p-6 text-left">
+                <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
+                <p className="text-gray-600 text-sm mt-2">{p.applications}</p>
               </div>
+              <div className="flex items-center gap-4 mt-6 mb-5">
+              <Link href="/products">
+              <button className="px-25 py-2 border rounded-lg hover:bg-gray-100 ml-8">View Details</button>
+              </Link>
+            </div>
             </div>
           ))}
         </div>
@@ -151,7 +179,7 @@ export default function ProductsPage() {
             </div>
             <div className="relative h-64">
               <Image
-                src="/categories/granite.jpg"
+                src="/Exotic-granite.jpeg"
                 alt="Premium Granite"
                 fill
                 className="object-cover rounded-lg"

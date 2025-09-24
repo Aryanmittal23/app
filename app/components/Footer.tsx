@@ -144,7 +144,7 @@ export default function Footer() {
               priority
             />
              <p className="text-gray-1200 text-sm leading-snug">
-                Beyond the Surface: Crafting Spaces with Marmilix's Exquisite Stone Solutions.
+                <b>Beyond the Surface</b>: Crafting Spaces with Marmilix's Exquisite Stone Solutions.
               </p> 
           </div>
         {Object.entries(footerLinks).map(([title, links]) => (

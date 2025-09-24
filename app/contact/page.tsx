@@ -96,6 +96,7 @@ const router = useRouter()
             />
 
             {/* Country Dropdown */}
+            
             {/* <CountryDropdown
               value={form.country}
               className="w-full border rounded-lg px-4 py-2"
@@ -147,7 +148,7 @@ const router = useRouter()
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h3 className="font-bold text-lg">Call Us</h3>
             <p className="text-gray-600 mt-2">
-              +91-XXXX-XXXXXX <br /> +91-XXXX-XXXXXX
+              +91-81096-63368 {/*<br /> +91-81096-63368 */}
             </p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6">

@@ -57,9 +57,10 @@ export default function AboutPage() {
           Aryan Mittal
         </h1>
         <p className="text-lg mt-2 text-gray-600">Founder, Marmilix</p>
-        <h2 className="mt-8 text-2xl md:text-3xl font-semibold">
-           WE DON’T JUST CREATE PRODUCTS. WE BUILD EXPERIENCES.
-        </h2>
+        <h3 className="mt-8 text-2xl md:text-3xl font-semibold">
+           WE DON’T JUST CREATE PRODUCTS. <br />
+           WE BUILD EXPERIENCES.
+        </h3>
         <p className="mt-6 text-gray-700 leading-relaxed">
           We believe in the power of innovation rooted in timeless
           values. Every collection is thoughtfully designed to balance

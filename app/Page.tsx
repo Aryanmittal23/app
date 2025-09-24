@@ -19,7 +19,7 @@ export default function Home() {
       id: 1,
       name: "Carrara White Marble",
       category: "Marble",
-      description: "Classic Italian-style white marble with subtle veining",
+      description: "Classic Italian-style white marble",
       image: "/Exotic-granite.jpeg", // replace with your image path
     },
     {
@@ -210,7 +210,7 @@ const features = [
                   fill
                   className="object-cover"
                 />
-                <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg">
                   {product.category}
                 </span>
               </div>
@@ -218,14 +218,9 @@ const features = [
                 <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
                 <p className="text-gray-600 text-sm mt-2">{product.description}</p>
               </div>
-              <div className="flex items-center gap-4 mt-6">
-                <Link href="/contact">
-                <button className="px-4 py-2 border rounded-lg hover:bg-gray-100">
-                Get Quote
-              </button>
-                </Link>
+              <div className="flex items-center gap-4 mt-6 mb-5">
               <Link href="/products">
-              <button className="text-gray-700 underline">View Catalog</button>
+              <button className="px-25 py-2 border rounded-lg hover:bg-gray-100 ml-12">View Details</button>
               </Link>
             </div>
             </div>

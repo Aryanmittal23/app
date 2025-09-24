@@ -5,9 +5,9 @@ import Image from "next/image";
 const posts = [
   {
     id: 1,
-    title: "Choosing the Right Marble for Your Home",
+    title: "Choosing the Right Marble ",
     category: "Marble",
-    image: "/blog/marble-tips.jpg",
+    image: "/Exotic-granite.jpeg",
     excerpt:
       "Discover how to select the perfect marble for flooring, countertops, and wall cladding to match your interior style.",
   },
@@ -15,7 +15,7 @@ const posts = [
     id: 2,
     title: "Granite vs Marble: Which is Better?",
     category: "Granite",
-    image: "/blog/granite-vs-marble.jpg",
+    image: "/Exotic-granite.jpeg",
     excerpt:
       "We compare granite and marble to help you understand durability, maintenance, and aesthetics.",
   },
@@ -23,7 +23,7 @@ const posts = [
     id: 3,
     title: "Latest Stone Design Trends in 2025",
     category: "Trends",
-    image: "/blog/stone-trends.jpg",
+    image: "/Exotic-granite.jpeg",
     excerpt:
       "From bold veining patterns to sustainable stone sourcing, here are the trends shaping luxury interiors.",
   },
@@ -59,7 +59,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <div
               key={post.id}
-              className="border rounded-lg shadow-sm overflow-hidden bg-white hover:shadow-md transition"
+              className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
             >
               <div className="relative h-48">
                 <Image
@@ -68,7 +68,7 @@ export default function BlogPage() {
                   fill
                   className="object-cover"
                 />
-                <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
+                <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded-lg">
                   {post.category}
                 </span>
               </div>
