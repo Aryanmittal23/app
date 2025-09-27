@@ -4,8 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation" 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-// import { CountryDropdown } from "react-country-dropdown";
-// import "react-country-dropdown/dist/index.css";
+import { countries } from "../data/countries/countries";
 
 export default function ContactPage() {
    const [form, setForm] = useState({
@@ -20,6 +19,11 @@ const router = useRouter()
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
+
+  const handlePhoneChange = (value: string, country: CountryData) => {
+    setForm({ ...form, phone: value, country: country.name });
+  };
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -86,23 +90,29 @@ const router = useRouter()
               />
             </div>
             {/* Phone Input with Country Code */}
-            <PhoneInput
-              country={"in"} // default India
-              value={form.phone}
-              onChange={(phone) => setForm({ ...form, phone })}
-              inputStyle={{ width: "100%" }}
-              containerClass="rounded-lg"
-              inputClass="w-full border rounded-lg px-4 py-2"
-            />
+      <PhoneInput
+        country={"in"} // default India
+        value={form.phone}
+        onChange={handlePhoneChange}
+        inputStyle={{ width: "100%" }}
+        containerClass="rounded-lg"
+        inputClass="w-full border rounded-lg px-4 py-2"
+      />
 
-            {/* Country Dropdown */}
+      {/* Country Dropdown (automatically filled) */}
+      <select
+        name="country"
+        value={form.country}
+        onChange={handleChange}
+        className="w-full border rounded-md p-2"
+      >
+        {form.country ? (
+          <option value={form.country}>{form.country}</option>
+        ) : (
+          <option value="">Select Country</option>
+        )}
+      </select>
             
-            {/* <CountryDropdown
-              value={form.country}
-              className="w-full border rounded-lg px-4 py-2"
-              preferredCountries={["in", "us", "gb"]}
-              handleChange={(val) => setForm({ ...form, country: val })}
-            /> */}
 
             {/* Consent */}
             <label className="flex items-center gap-2">

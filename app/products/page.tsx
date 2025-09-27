@@ -2,45 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 
-const products = [
-  {
-    id: 1,
-    name: "Carrara White Marble",
-    category: "Marble",
-    image: "/Exotic-granite.jpeg",
-    applications: "Flooring, Wall Cladding, Countertops",
-  },
-  {
-    id: 2,
-    name: "Emperador Dark Marble",
-    category: "Marble",
-    image: "/Exotic-granite.jpeg",
-    applications: "Feature Walls, Bathroom Vanities",
-  },
-  {
-    id: 3,
-    name: "Thassos White Marble",
-    category: "Marble",
-    image: "/Exotic-granite.jpeg",
-    applications: "Luxury Interiors, Sculptures",
-  },
-  {
-    id: 4,
-    name: "Kashmir Black Granite",
-    category: "Granite",
-    image: "/Exotic-granite.jpeg",
-    applications: "Kitchen Countertops, Flooring",
-  },
-  {
-    id: 5,
-    name: "Rajasthan Red Granite",
-    category: "Granite",
-    image: "/Exotic-granite.jpeg",
-    applications: "Exterior Cladding, Monuments",
-  },
-];
+// ✅ Import products from data file
+import { products } from "../data/products/products";
 
 export default function ProductsPage() {
   const [filter, setFilter] = useState("All");
@@ -100,36 +65,6 @@ export default function ProductsPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {filteredProducts.map((p) => (
-            // <div
-            //   key={p.id}
-            //   className="border rounded-lg shadow-sm overflow-hidden bg-white"
-            // >
-            //   <div className="relative h-48">
-            //     <Image
-            //       src={p.image}
-            //       alt={p.name}
-            //       fill
-            //       className="object-cover"
-            //     />
-            //     <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
-            //       {p.category.toUpperCase()}
-            //     </span>
-            //   </div>
-            //   <div className="p-4">
-            //     <h3 className="font-semibold text-lg">{p.name}</h3>
-            //     <p className="text-sm text-gray-600 mt-2">{p.applications}</p>
-            //     <div className="flex justify-between mt-4">
-            //       <Link href="/contact">
-            //     <button className="px-7 py-2 border rounded-lg hover:bg-gray-100 ml-5">
-            //     Get Quote
-            //   </button>
-            //     </Link>
-            //       <button className="px-3 py-2 border rounded text-sm">
-            //         View Details
-            //       </button>
-            //     </div>
-            //   </div>
-            // </div>
             <div
               key={p.id}
               className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
@@ -147,13 +82,16 @@ export default function ProductsPage() {
               </div>
               <div className="p-6 text-left">
                 <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
-                <p className="text-gray-600 text-sm mt-2">{p.applications}</p>
+                <p className="text-gray-600 text-sm mt-2">{p.description}</p>
               </div>
               <div className="flex items-center gap-4 mt-6 mb-5">
-              <Link href="/products">
-              <button className="px-25 py-2 border rounded-lg hover:bg-gray-100 ml-8">View Details</button>
-              </Link>
-            </div>
+                {/* ✅ Link each product to detail page */}
+                <Link href={`/products/${p.id}`}>
+                  <button className="px-5 py-2 border rounded-lg hover:bg-gray-100 ml-8">
+                    View Details
+                  </button>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

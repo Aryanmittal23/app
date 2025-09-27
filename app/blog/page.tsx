@@ -1,33 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import {blogs} from "../data/blog/blog";
+import Link from "next/link";
 
-const posts = [
-  {
-    id: 1,
-    title: "Choosing the Right Marble ",
-    category: "Marble",
-    image: "/Exotic-granite.jpeg",
-    excerpt:
-      "Discover how to select the perfect marble for flooring, countertops, and wall cladding to match your interior style.",
-  },
-  {
-    id: 2,
-    title: "Granite vs Marble: Which is Better?",
-    category: "Granite",
-    image: "/Exotic-granite.jpeg",
-    excerpt:
-      "We compare granite and marble to help you understand durability, maintenance, and aesthetics.",
-  },
-  {
-    id: 3,
-    title: "Latest Stone Design Trends in 2025",
-    category: "Trends",
-    image: "/Exotic-granite.jpeg",
-    excerpt:
-      "From bold veining patterns to sustainable stone sourcing, here are the trends shaping luxury interiors.",
-  },
-];
 
 export default function BlogPage() {
   return (
@@ -56,7 +32,7 @@ export default function BlogPage() {
           Latest Articles
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
+          {blogs.map((post) => (
             <div
               key={post.id}
               className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
@@ -69,37 +45,20 @@ export default function BlogPage() {
                   className="object-cover"
                 />
                 <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded-lg">
-                  {post.category}
+                  {post.date}
                 </span>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-lg">{post.title}</h3>
                 <p className="text-sm text-gray-600 mt-2">{post.excerpt}</p>
-                <button className="mt-4 px-4 py-2 border rounded text-sm hover:bg-black hover:text-white transition">
-                  Read More
-                </button>
+                <Link href={`/blog/${post.id}`}>
+                  <button className="mt-4 px-4 py-2 border rounded text-sm hover:bg-black hover:text-white transition">
+                    Read More
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-black text-white py-12 text-center">
-        <h2 className="text-2xl font-bold">Stay Inspired</h2>
-        <p className="mt-2">
-          Subscribe to our newsletter for the latest design tips and stone
-          innovations.
-        </p>
-        <div className="mt-6 flex justify-center">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 rounded-l border-none w-64 text-black"
-          />
-          <button className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded-r">
-            Subscribe
-          </button>
         </div>
       </section>
     </div>

@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Star } from "lucide-react";
 import { Shield, Gem, Globe, Users } from "lucide-react";
-
+import { products } from "./data/products/products";
 
 export default function Home() {
   const stats = [
@@ -14,29 +14,6 @@ export default function Home() {
     { number: "99%", label: "Client Satisfaction" },
   ]
 
-  const products = [
-    {
-      id: 1,
-      name: "Carrara White Marble",
-      category: "Marble",
-      description: "Classic Italian-style white marble",
-      image: "/Exotic-granite.jpeg", // replace with your image path
-    },
-    {
-      id: 2,
-      name: "Kashmir Black Granite",
-      category: "Granite",
-      description: "Deep black granite with silver specks",
-      image: "/about-page.jpeg", // replace with your image path
-    },
-    {
-      id: 3,
-      name: "Emperador Dark Marble",
-      category: "Marble",
-      description: "Rich brown marble with golden veining",
-      image: "/Premium-marble.jpeg", // replace with your image path
-    },
-  ]
 const features = [
     {
       icon: <Shield className="w-10 h-10 text-yellow-600" />,
@@ -197,26 +174,26 @@ const features = [
         </p>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((p) => (
             <div
-              key={product.id}
+              key={p.id}
               className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
             >
               <div className="relative w-full h-56">
                 <Image
-                  src={product.image}
-                  alt={product.name}
+                  src={p.image}
+                  alt={p.name}
                   fill
                   className="object-cover"
                 />
                 <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg">
-                  {product.category}
+                  {p.category}
                 </span>
               </div>
               <div className="p-6 text-left">
-                <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
-                <p className="text-gray-600 text-sm mt-2">{product.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
+                <p className="text-gray-600 text-sm mt-2">{p.description}</p>
               </div>
               <div className="flex items-center gap-4 mt-6 mb-5">
               <Link href="/products">
@@ -225,7 +202,39 @@ const features = [
             </div>
             </div>
           ))}
-        </div>
+        </div> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {products.slice(0, 3).map((p) => (
+    <div
+      key={p.id}
+      className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
+    >
+      <div className="relative w-full h-56">
+        <Image
+          src={p.image}
+          alt={p.name}
+          fill
+          className="object-cover"
+        />
+        <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg">
+          {p.category}
+        </span>
+      </div>
+      <div className="p-6 text-left">
+        <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
+        <p className="text-gray-600 text-sm mt-2">{p.description}</p>
+      </div>
+      <div className="flex items-center gap-4 mt-6 mb-5">
+        <Link href="/products/[id]" as={`/products/${p.id}`}>
+          <button className="w-full px-20 py-2 border rounded-lg hover:bg-gray-100 ml-12">
+            View Details
+          </button>
+        </Link>
+      </div>
+    </div>
+  ))}
+</div>
+
           {/* View All Button */ }
       </div>
       <div className="flex justify-center mt-10">
