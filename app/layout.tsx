@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "Mamilix",
+  title: "Marmilix",
   description: "Beyond the Surface",
 };
 

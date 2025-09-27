@@ -37,7 +37,7 @@ export const blogs = [
     content: "Full blog article content goes here...",
   },
   {
-    id: 4,
+    id: 5,
     title: "Top Granite Finishes for Kitchens",
     author: "Admin",
     date: "Sep 20, 2025",
