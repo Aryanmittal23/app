@@ -170,18 +170,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm mb-4 tracking-wide font-semibold text-black">Contact Info</h3>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3 ">
-                <Mail size={16} className="text-brand-green-400" />
-                <a href="mailto:info@marmilix.com" className="text-black" >info@marmilix.com</a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-brand-green-400" />
-                <a href="tel:+918109663368" className="text-black">+91 8109663368</a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={30} className="text-brand-green-400" />
-                <a href="https://www.google.com/maps?q=Sheopur,+Madhya+Pradesh,+India" className="text-black">Sheopur, Madhya Pradesh, India</a>
-              </div>
+                <a href="mailto:info@marmilix.com" className=" text-gray-600 hover:text-black flex items-center space-x-4"><Mail size={16} className="mr-2" />info@marmilix.com</a>
+
+                <a href="tel:+918109663368" className=" text-gray-600 hover:text-black flex items-center space-x-4"><Phone size={16} className="mr-2" /> +91 8109663368</a>
+
+                <a href="https://www.google.com/maps?q=Sheopur,+Madhya+Pradesh,+India" className=" text-gray-600 hover:text-black flex items-center space-x-4"><MapPin size={25} className="mr-2" />Sheopur, Madhya Pradesh, India</a>
             </div>
           </div>
         </div>

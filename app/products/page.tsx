@@ -23,10 +23,10 @@ export default function ProductsPage() {
       <section className="relative h-72 flex items-center justify-center bg-black">
         <div className="absolute inset-0">
           <Image
-            src="/Exotic-granite.jpeg.jpg"
+            src="/blog/how-to-buy(blog4).jpg"
             alt="Premium Stones"
             fill
-            className="object-cover opacity-60"
+            className="object-cover opacity-80"
           />
         </div>
         <div className="relative text-center text-white z-10">

@@ -12,7 +12,7 @@ export default function BlogPage() {
       <section className="relative h-64 flex items-center justify-center bg-black">
         <div className="absolute inset-0">
           <Image
-            src="/hero-blog.jpg"
+            src="/blog/blog.jpg"
             alt="Blog Banner"
             fill
             className="object-cover opacity-60"
@@ -37,16 +37,16 @@ export default function BlogPage() {
               key={post.id}
               className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
             >
-              <div className="relative h-48">
+              <div className="relative h-58">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
                   className="object-cover"
                 />
-                <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded-lg">
+                {/* <span className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded-lg">
                   {post.date}
-                </span>
+                </span> */}
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-lg">{post.title}</h3>

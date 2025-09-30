@@ -1,27 +1,30 @@
 "use client"
 
 import { motion } from "framer-motion"
-
+import Image from "next/image"
 export default function CareMaintenancePage() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16 text-gray-800 mt-15">
+    <div>
       {/* Heading */}
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-6 text-gray-900"
-      >
-        Care & Maintenance
-      </motion.h1>
-
-      {/* Intro */}
-      <p className="text-gray-600 mb-8 leading-relaxed">
-        Marmilix stone surfaces are crafted to last for generations. With proper care and simple
-        cleaning habits, your marble and granite will retain their beauty and durability for years
-        to come.
-      </p>
-
+      <section className="relative h-64 flex items-center justify-center bg-black">
+              <div className="absolute inset-0">
+                <Image
+                  src="/blog/cleaning(blog5).webp"
+                  alt="Blog Banner"
+                  fill
+                  className="object-cover opacity-60"
+                />
+              </div>
+              <div className="relative text-center text-white z-10">
+                <h1 className="text-4xl font-bold">Care & Maintenance</h1>
+                <p className="mt-2 text-lg">
+                  Marmilix stone surfaces are crafted to last for generations
+                </p>
+              </div>
+            </section>
+      
+      
+<div className="max-w-5xl mx-auto px-6 py-16 text-gray-800 mt-15">
       {/* Quick Tips */}
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-10">
         <h2 className="text-2xl font-semibold mb-4 text-gray-900">
@@ -80,6 +83,7 @@ export default function CareMaintenancePage() {
           Marmilix experts
         </a>.
       </p>
+    </div>
     </div>
   )
 }

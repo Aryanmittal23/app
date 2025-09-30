@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { countries } from "../data/countries/countries";
+import Image from "next/image";
 
 export default function ContactPage() {
    const [form, setForm] = useState({
@@ -52,7 +53,13 @@ const router = useRouter()
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 text-center">
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0" />
+        <Image
+            src="/contact-img.webp"
+            alt="Blog Banner"
+            fill
+            className="object-cover opacity-80"
+          />
         <div className="relative z-10">
           <h1 className="text-4xl font-bold">Get In Touch</h1>
           <p className="mt-2 text-lg">Let&apos;s Discuss Your Project</p>
@@ -150,15 +157,15 @@ const router = useRouter()
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h3 className="font-bold text-lg">Visit Our Office</h3>
             <p className="text-gray-600 mt-2">
-              Marmilix Export House <br />
-              Marble Industrial Area <br />
-              Rajasthan, India - 342001
+              Marmilix <br />
+              City of Shiv, Sheopur <br />
+              Madhya Pradesh, India - 476337
             </p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h3 className="font-bold text-lg">Call Us</h3>
             <p className="text-gray-600 mt-2">
-              +91-81096-63368 {/*<br /> +91-81096-63368 */}
+              +91-8109663368 {/*<br /> +91-81096-63368 */}
             </p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6">
@@ -169,7 +176,7 @@ const router = useRouter()
       </section>
 
       {/* Map + Why Visit */}
-      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6">
+      <section className="container mx-auto grid grid-cols-1 gap-8 py-16 px-6">
         <div className="rounded-lg overflow-hidden shadow-lg">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.4671779472313!2d78.7494827750881!3d25.66846458363269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981a9055e272d7f%3A0x4200e1263c7246a3!2sSheopur%2C%20Madhya%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1695379162920!5m2!1sen!2sin"
@@ -180,7 +187,7 @@ const router = useRouter()
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      <div>
+      {/* <div>
           <h2 className="text-2xl font-bold mb-4">Why Visit Our Showroom?</h2>
           <ul className="space-y-3 text-gray-700">
             <li>✅ Touch & Feel Quality</li>
@@ -193,7 +200,7 @@ const router = useRouter()
             Get Directions
           </button>
           </a>
-        </div>
+        </div> */}
       </section>
 
       {/* FAQ */}

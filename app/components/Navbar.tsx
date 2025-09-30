@@ -44,7 +44,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-800 hover:text-black-600 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                className="text-gray-600 hover:text-[#000000] px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute inset-x-0 bottom-0 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
@@ -53,17 +53,17 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          {/* <div className="hidden lg:block">
+          <div className="hidden lg:block">
             <Link href="/contact">
               <motion.button
-                className="bg-green-600 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-green-700 transition-colors shadow-md"
+                className="bg-gray-900 text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-gray-700 transition-colors shadow-md"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Get Quote
               </motion.button>
             </Link>
-          </div> */}
+          </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
@@ -98,7 +98,7 @@ export default function Navbar() {
               ))}
               <div className="px-3 py-2">
                 <Link href="/contact">
-                  <button className="w-full bg-green-600 text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-green-700 transition-colors">
+                  <button className="w-full bg-gray-900 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gray-600 transition-colors">
                     Get Quote
                   </button>
                 </Link>

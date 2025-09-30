@@ -88,7 +88,7 @@ const features = [
             </button>
             </Link>
             <Link href="/contact">
-            <button className="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition text-lg">
+            <button className="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition text-lg"> 
               Request Consultation
             </button>
             </Link>
@@ -174,35 +174,6 @@ const features = [
         </p>
 
         {/* Product Grid */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((p) => (
-            <div
-              key={p.id}
-              className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
-            >
-              <div className="relative w-full h-56">
-                <Image
-                  src={p.image}
-                  alt={p.name}
-                  fill
-                  className="object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg">
-                  {p.category}
-                </span>
-              </div>
-              <div className="p-6 text-left">
-                <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
-                <p className="text-gray-600 text-sm mt-2">{p.description}</p>
-              </div>
-              <div className="flex items-center gap-4 mt-6 mb-5">
-              <Link href="/products">
-              <button className="px-25 py-2 border rounded-lg hover:bg-gray-100 ml-12">View Details</button>
-              </Link>
-            </div>
-            </div>
-          ))}
-        </div> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
   {products.slice(0, 3).map((p) => (
     <div

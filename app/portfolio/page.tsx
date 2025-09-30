@@ -2,31 +2,9 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { CheckCircle, Globe, Award, Layers } from "lucide-react"
+import { portfolioData } from "../data/portfolio/portfolio" // adjust path based on your folder structure
 
 export default function PortfolioPage() {
-  const projects = [
-    {
-      image: "/marble1.jpg",
-      title: "Luxury Marble Flooring",
-      description: "Crafted with precision for timeless elegance.",
-    },
-    {
-      image: "/granite1.jpg",
-      title: "Granite Countertops",
-      description: "Durability meets design in modern spaces.",
-    },
-    {
-      image: "/marble2.jpg",
-      title: "Hotel Lobby Design",
-      description: "Transforming spaces with premium stones.",
-    },
-    {
-      image: "/granite2.jpg",
-      title: "Granite Staircases",
-      description: "Strength and beauty for architectural excellence.",
-    },
-  ]
-
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
@@ -47,7 +25,7 @@ export default function PortfolioPage() {
             />
             <h1 className="text-4xl font-bold mb-4">Marmilix Portfolio</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Transforming spaces worldwide with premium marble and granite for over 35 years.
+              Transforming spaces worldwide with premium marble and granite.
             </p>
           </motion.div>
         </div>
@@ -69,9 +47,9 @@ export default function PortfolioPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-semibold text-center mb-10">Our Work</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {portfolioData.map((project, index) => (
               <motion.div
-                key={index}
+                key={project.id}
                 className="rounded-2xl overflow-hidden shadow-lg bg-white"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -98,12 +76,7 @@ export default function PortfolioPage() {
       {/* Why Choose Us */}
       <section className="py-16 max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-semibold text-center mb-10">Why Choose Marmilix</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <div>
-            <Award className="mx-auto w-10 h-10 text-gray-800 mb-3" />
-            <h4 className="font-semibold">35+ Years Experience</h4>
-            <p className="text-gray-600">Trusted expertise in the marble & granite industry.</p>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
           <div>
             <Layers className="mx-auto w-10 h-10 text-gray-800 mb-3" />
             <h4 className="font-semibold">Premium Quality</h4>

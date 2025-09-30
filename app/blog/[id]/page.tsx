@@ -8,7 +8,7 @@ import { blogs } from "../../data/blog/blog";
 
 export default function BlogDetailPage() {
   const { id } = useParams();
-  const [visibleCount, setVisibleCount] = useState(6); // show 6 initially
+  const [visibleCount, setVisibleCount] = useState(3); // show 3 initially
 
   const blog = blogs.find((b) => b.id === Number(id));
   const related = blogs.filter((b) => b.id !== Number(id));
@@ -16,9 +16,11 @@ export default function BlogDetailPage() {
   if (!blog) return <p className="p-8">Blog not found</p>;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 mt-20">
+    <div className="max-w-5xl mx-auto px-4 py-12 mt-20  ">
       {/* Main Blog */}
-      <article className="mb-16">
+      
+      <article className="mb-16 ">
+        
         <Image
           src={blog.image}
           alt={blog.title}
@@ -26,11 +28,13 @@ export default function BlogDetailPage() {
           height={500}
           className="rounded-2xl shadow-lg object-cover w-full mb-8"
         />
+        
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{blog.title}</h1>
         <p className="text-sm text-gray-500 mb-6">
           By {blog.author} • {blog.date}
         </p>
-        <p className="text-lg text-gray-700 leading-relaxed">{blog.content}</p>
+        {/* <p className="text-lg text-gray-700 leading-relaxed">{blog.content}</p> */}
+        <div dangerouslySetInnerHTML={{ __html: blog.content }} />
       </article>
 
       {/* Related Blogs */}
@@ -66,7 +70,7 @@ export default function BlogDetailPage() {
         {visibleCount < related.length && (
           <div className="flex justify-center mt-10">
             <button
-              onClick={() => setVisibleCount((prev) => prev + 6)}
+              onClick={() => setVisibleCount((prev) => prev + 3)}
               className="px-6 py-3 rounded-xl border border-[#594423] text-[#594423] hover:bg-[#F7E6CA] transition shadow-md"
             >
               Load More Articles
