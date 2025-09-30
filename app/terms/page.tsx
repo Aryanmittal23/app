@@ -8,7 +8,7 @@ export default function TermsOfServicePage() {
     <section className="relative h-64 flex items-center justify-center bg-black">
                     <div className="absolute inset-0">
                       <Image
-                        src="/hero-terms.jpg"
+                        src="/product/AlaskaGoldGranite.jpeg"
                         alt="terms Banner"
                         fill
                         className="object-cover opacity-60"

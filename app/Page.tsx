@@ -5,6 +5,8 @@ import Link from "next/link"
 import { ArrowRight, Star } from "lucide-react";
 import { Shield, Gem, Globe, Users } from "lucide-react";
 import { products } from "./data/products/products";
+import { LinearFilter } from "three/src/constants.js";
+import React from "react";
 
 export default function Home() {
   const stats = [
@@ -45,25 +47,26 @@ const features = [
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
+        {/* <Image
           src="/heroBackground.jpeg" // make sure this image is in /public folder
           alt="Luxury marble kitchen countertop"
           fill
           className="object-cover"
           priority
-        />
+        /> */}
+        <video src="/video-main.mp4" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      {/* <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          {/* Badge */}
+          {/* Badge 
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Star className="h-4 w-4 text-yellow-400 fill-current" />
             <span className="text-sm">Premium Quality Since 1985</span>
           </div>
 
-          {/* Main Headline */}
+          {/* Main Headline 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6 tracking-tight">
             World-Class{" "}
             <span className="text-yellow-400">Marble</span> &{" "}
@@ -72,14 +75,14 @@ const features = [
             for Global Projects
           </h1>
 
-          {/* Subheadline */}
+          {/* Subheadline 
           <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
             Transform your spaces with our premium natural stones. From luxury
             residences to commercial landmarks, we deliver excellence across
             40+ countries worldwide.
           </p>
 
-          {/* CTAs */}
+          {/* CTAs 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/products">
             <button className="flex items-center px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition text-lg">
@@ -94,7 +97,7 @@ const features = [
             </Link>
           </div>
 
-          {/* Stats */}
+          {/* Stats 
           <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/20">
             <div>
               <div className="text-3xl mb-2">40+</div>
@@ -110,7 +113,7 @@ const features = [
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
 
       {/* </section> */}
@@ -125,7 +128,7 @@ const features = [
           </p>
           <div className="mt-6 space-y-6">
             <div className="flex items-start gap-4">
-              <span className="bg-yellow-500 text-white font-bold px-3 py-1 rounded-lg">
+              <span className="bg-gray-900 text-white font-bold px-3 py-1 rounded-lg">
                 30+
               </span>
               <p className="text-gray-700">
@@ -146,7 +149,7 @@ const features = [
             </div>
           </div>
           <Link href="/about">
-          <button className="mt-8 px-5 py-3 border rounded-lg hover:bg-gray-100">
+          <button className="mt-8 px-5 py-3 border rounded-lg hover:bg-gray-100 cursor-pointer">
             Learn More About Us
           </button>
           </Link>
@@ -195,11 +198,11 @@ const features = [
         <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
         <p className="text-gray-600 text-sm mt-2">{p.description}</p>
       </div>
-      <div className="flex items-center gap-4 mt-6 mb-5">
+      <div className="p-4">
         <Link href="/products/[id]" as={`/products/${p.id}`}>
-          <button className="w-full px-20 py-2 border rounded-lg hover:bg-gray-100 ml-12">
-            View Details
-          </button>
+          <button className="mt-3 w-full border  hover:bg-gray-100 px-4 py-2 rounded-lg transition cursor-pointer">
+                    View Details
+                  </button>
         </Link>
       </div>
     </div>
@@ -210,7 +213,7 @@ const features = [
       </div>
       <div className="flex justify-center mt-10">
         <Link href="/products">
-          <button className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700">
+          <button className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 cursor-pointer">
             View All Products
           </button>
           </Link>
@@ -235,7 +238,10 @@ const features = [
               key={idx}
               className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
             >
-              <div className="flex justify-center mb-4">{feature.icon}</div>
+              {/* <div className="flex justify-center mb-4 text-gray-900">{feature.icon}</div> */}
+              <div className="flex justify-center mb-4">
+  {React.cloneElement(feature.icon, { className: "w-10 h-10 text-gray-700" })}
+</div>
               <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
               <p className="text-gray-600 text-sm">{feature.desc}</p>
             </div>
@@ -244,8 +250,64 @@ const features = [
       </div>
     </section>
 
+    {/* Testimonial Section */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+    <p className="text-gray-600 mb-12">
+      Hear from our valued clients about their experience with{" "}
+      <span className="font-bold">Marmilix</span>.
+    </p>
+
+    {/* Carousel */}
+    <div className="relative overflow-hidden">
+      <motion.div
+        className="flex gap-8"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          repeat: Infinity,
+          duration: 10,
+          ease: "linear",
+        }}
+      >
+        
+        {[...Array(2)].map((_, idx) => (
+          <div key={idx} className="flex gap-8">
+            {/* Single Testimonial */}
+            <div className="min-w-[300px] max-w-sm bg-gray-50 shadow-lg rounded-xl p-6 text-left">
+              <p className="text-gray-700 italic mb-4">
+                “The marble quality exceeded expectations. Our hotel lobby looks
+                absolutely stunning!”
+              </p>
+              <h4 className="font-bold text-gray-900">Devansh Sharma</h4>
+              <span className="text-sm text-gray-500">Owner of Vinayak Residency, India</span>
+            </div>
+
+            <div className="min-w-[300px] max-w-sm bg-gray-50 shadow-lg rounded-xl p-6 text-left">
+              <p className="text-gray-700 italic mb-4">
+                “Timely delivery and premium granite helped us finish our project
+                on schedule.”
+              </p>
+              <h4 className="font-bold text-gray-900">Vatsal Goyal</h4>
+              <span className="text-sm text-gray-500">Architect, India</span>
+            </div>
+
+            <div className="min-w-[300px] max-w-sm bg-gray-50 shadow-lg rounded-xl p-6 text-left">
+              <p className="text-gray-700 italic mb-4">
+                “Marmilix stones brought unmatched elegance to our luxury villas.”
+              </p>
+              <h4 className="font-bold text-gray-900">Akash Jain</h4>
+              <span className="text-sm text-gray-500">Builder, India</span>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  </div>
+</section>
+
       {/* Stats + CTA Section */}
-      <section className="bg-gray-900 text-white py-16">
+      {/* <section className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             <div>
@@ -275,13 +337,13 @@ const features = [
           </p>
           <div className="flex justify-center gap-6">
             <Link href="/contact">
-            <button className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400">
+            <button className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 cursor-pointer">
               Get Your Quote Today
             </button>
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
    
     
     </div>

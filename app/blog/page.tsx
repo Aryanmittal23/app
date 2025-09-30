@@ -52,7 +52,7 @@ export default function BlogPage() {
                 <h3 className="font-semibold text-lg">{post.title}</h3>
                 <p className="text-sm text-gray-600 mt-2">{post.excerpt}</p>
                 <Link href={`/blog/${post.id}`}>
-                  <button className="mt-4 px-4 py-2 border rounded text-sm hover:bg-black hover:text-white transition">
+                  <button className="mt-4 w-full px-4 py-2 border rounded-lg text-sm hover:bg-gray-100 transition cursor-pointer">
                     Read More
                   </button>
                 </Link>

@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
         <section className="relative h-64 flex items-center justify-center bg-black">
                 <div className="absolute inset-0">
                   <Image
-                    src="/hero-privacy.jpg"
+                    src="/product/AlpineWhiteGranite.jpeg"
                     alt="Privacy Policy Banner"
                     fill
                     className="object-cover opacity-60"

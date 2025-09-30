@@ -57,7 +57,7 @@ export default function BlogDetailPage() {
                 <h3 className="text-lg font-medium text-gray-800">{item.title}</h3>
                 <p className="text-sm text-gray-600 mt-2 line-clamp-3">{item.excerpt}</p>
                 <Link href={`/blog/${item.id}`}>
-                  <button className="mt-3 w-full border border-[#594423] text-[#594423] hover:bg-[#F7E6CA] px-4 py-2 rounded-lg transition">
+                  <button className="mt-3 w-full border hover:bg-gray-100 cursor-pointer px-4 py-2 rounded-lg transition">
                     Read More
                   </button>
                 </Link>
@@ -71,7 +71,7 @@ export default function BlogDetailPage() {
           <div className="flex justify-center mt-10">
             <button
               onClick={() => setVisibleCount((prev) => prev + 3)}
-              className="px-6 py-3 rounded-xl border border-[#594423] text-[#594423] hover:bg-[#F7E6CA] transition shadow-md"
+              className="px-6 py-3 rounded-lg border hover:bg-black hover:text-white cursor-pointer transition shadow-md"
             >
               Load More Articles
             </button>

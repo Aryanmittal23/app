@@ -49,7 +49,7 @@ export default function ProductsPage() {
             {["All", "Marble", "Granite"].map((c) => (
               <button
                 key={c}
-                className={`px-4 py-2 rounded ${
+                className= {`px-4 py-2 rounded ${
                   filter === c
                     ? "bg-gray-900 text-white"
                     : "bg-gray-200 hover:bg-gray-300"
@@ -84,13 +84,10 @@ export default function ProductsPage() {
                 <h3 className="text-lg font-semibold text-gray-900">{p.name}</h3>
                 <p className="text-gray-600 text-sm mt-2">{p.description}</p>
               </div>
-              <div className="flex items-center gap-4 mt-6 mb-5">
-                {/* ✅ Link each product to detail page */}
-                <Link href={`/products/${p.id}`}>
-                  <button className="px-5 py-2 border rounded-lg hover:bg-gray-100 ml-8">
-                    View Details
-                  </button>
-                </Link>
+              <div className="p-4">
+        <Link href="/products/[id]" as={`/products/${p.id}`}>
+           <button className="mt-3 w-full border hover:bg-gray-100 cursor-pointer px-4 py-2 rounded-lg transition">View Details</button>
+        </Link>
               </div>
             </div>
           ))}
@@ -104,7 +101,7 @@ export default function ProductsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="relative h-64">
               <Image
-                src="/Exotic-granite.jpeg"
+                src="/product/CalacattaStatuarioMarble.webp"
                 alt="Premium Marble"
                 fill
                 className="object-cover rounded-lg"
@@ -117,7 +114,7 @@ export default function ProductsPage() {
             </div>
             <div className="relative h-64">
               <Image
-                src="/Exotic-granite.jpeg"
+                src="/product/KuppamWhiteGranite.jpg"
                 alt="Premium Granite"
                 fill
                 className="object-cover rounded-lg"
@@ -141,9 +138,11 @@ export default function ProductsPage() {
           We offer custom sourcing and specialized stone solutions. Let our
           experts help you find the perfect stone for your project.
         </p>
-        <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-semibold rounded">
-          Request Custom Quote
-        </button>
+        <Link href="/contact">
+          <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-semibold rounded cursor-pointer hover:bg-yellow-600">
+            Request Custom Quote
+          </button>
+        </Link>
       </section>
     </div>
   );

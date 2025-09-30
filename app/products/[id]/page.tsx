@@ -30,7 +30,7 @@ export default function ProductDetailPage() {
           <p className="text-gray-700 text-lg mb-6">{product.description}</p>
 
           <Link href="/contact">
-            <button className="bg-[#594423] hover:bg-[#82796B] text-white px-6 py-3 rounded-xl text-lg shadow-lg transition">
+            <button className="bg-[#594423] hover:bg-[#82796B] cursor-pointer text-white px-6 py-3 rounded-xl text-lg shadow-lg transition">
               Get Quote
             </button>
           </Link>
@@ -40,26 +40,31 @@ export default function ProductDetailPage() {
       {/* Related Products */}
       <div className="mt-16">
         <h2 className="text-2xl font-semibold text-gray-900 mb-6">You Might Also Like</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {related.slice(0, visibleCount).map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+              className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border border-gray-200"
             >
-              <Image
-                src={item.image}
-                alt={item.name}
-                width={400}
-                height={250}
-                className="object-cover w-full h-56"
-              />
+              <div className="relative w-full h-56">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg">
+                  {item.category}
+                </span>
+              </div>
+              <div className="p-6 text-left">
+                <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
+                <p className="text-gray-600 text-sm mt-2">{item.description}</p>
+              </div>
               <div className="p-4">
-                <h3 className="text-lg font-medium text-gray-800">{item.name}</h3>
-                <Link href={`/products/${item.id}`}>
-                  <button className="mt-3 w-full border border-[#594423] text-[#594423] hover:bg-[#F7E6CA] px-4 py-2 rounded-lg transition">
-                    View Details
-                  </button>
-                </Link>
+        <Link href="/products/[id]" as={`/products/${item.id}`}>
+           <button className="mt-3 w-full border hover:bg-gray-100 cursor-pointer px-4 py-2 rounded-lg transition">View Details</button>
+        </Link>
               </div>
             </div>
           ))}
@@ -70,7 +75,7 @@ export default function ProductDetailPage() {
           <div className="flex justify-center mt-10">
             <button
               onClick={() => setVisibleCount((prev) => prev + 6)} // load 6 more
-              className="px-6 py-3 rounded-xl border border-[#594423] text-[#594423] hover:bg-[#F7E6CA] transition shadow-md"
+              className="px-6 py-3 rounded-lg border hover:bg-black hover:text-white cursor-pointer transition shadow-md"
             >
               View More Products
             </button>

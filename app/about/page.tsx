@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Bold } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link"
 
@@ -39,11 +40,13 @@ export default function AboutPage() {
         transition={{ duration: 0.7 }}
         className="flex justify-center"
       >
-        <iframe
-          src="/founders.mp4"
-          className="rounded-2xl shadow-lg w-full md:w-3/4 h-80 md:h-[480px]"
-          allow="autoplay; fullscreen; picture-in-picture"
-        ></iframe>
+        <video
+          src="/hero-section-video.mp4"
+          autoPlay
+          loop
+          playsInline
+          className="rounded-sm shadow-lg"
+        />
       </motion.div>
 
       {/* Founder Section */}
@@ -58,8 +61,8 @@ export default function AboutPage() {
         </h1>
         <p className="text-lg mt-2 text-gray-600">Founder, Marmilix</p>
         <h3 className="mt-8 text-2xl md:text-3xl font-semibold">
-           WE DON’T JUST CREATE PRODUCTS. <br />
-           WE BUILD EXPERIENCES.
+           WE DON’T JUST CREATE PRODUCTS <br />
+           WE BUILD EXPERIENCES
         </h3>
         <p className="mt-6 text-gray-700 leading-relaxed">
           We believe in the power of innovation rooted in timeless
@@ -126,12 +129,6 @@ export default function AboutPage() {
 
       
     </div>
-
-
-
-
-
-
     
     <main className="bg-white text-gray-900">
 
@@ -239,8 +236,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-semibold mt-4">Aryan Mittal</h3>
             <p className="text-yellow-600 font-medium">Founder</p>
             <p className="text-gray-600 mt-2">
-              With 30+ years in the natural stone industry, Aryan founded Marmilix with
-              a vision to showcase India’s finest stones to the world.
+              Aryan founded Marmilix with a vision to showcase India’s finest stones to the world.
             </p>
           </div>
           <div className="p-6 border rounded-lg">
@@ -290,17 +286,17 @@ export default function AboutPage() {
       <section className="text-center py-16 px-6">
         <h2 className="text-4xl font-bold mb-4">Experience the Marmilix Difference</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-          Join thousands of satisfied clients worldwide who trust Marmilix for their
+          Join thousands of satisfied clients who trust <b className="text-black">Marmilix</b> for their
           premium natural stone needs.
         </p>
         <div className="flex justify-center gap-4">
           <Link href="/contact">
-            <button className="bg-yellow-600 text-white px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition">
+            <button className="bg-yellow-600 text-white px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition cursor-pointer">
               Start Your Project
             </button>
           </Link>
           <Link href="/products">
-          <button className="border border-gray-400 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+          <button className="border border-gray-400 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition cursor-pointer">
             View Our Products
           </button>
           </Link>
