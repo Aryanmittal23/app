@@ -140,12 +140,13 @@ export default function Footer() {
               alt="Marmilix"
               width={200}
               height={60}
-              className="h-36 w-auto"
+              className="h-14 w-auto mb-3"
               priority
             />
-             <p className="text-gray-1200 text-sm leading-snug">
-                <b>Beyond the Surface</b>: Crafting Spaces with Marmilix's Exquisite Stone Solutions.
-              </p> 
+             <p className="text-gray-1200 text-sm leading-snug mt-0">
+                <b>Beyond the Surface</b>: Crafting Spaces with <br /> Marmilix's
+                Exquisite Stone Solutions.
+              </p>
           </div>
         {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>

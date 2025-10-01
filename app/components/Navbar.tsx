@@ -33,7 +33,7 @@ export default function Navbar() {
               alt="Marmilix"
               width={200}
               height={60}
-              className="h-50 w-auto"
+              className="h-16 w-auto"
               priority
             />
           </Link>

@@ -44,8 +44,8 @@ export default function PortfolioPage() {
               src="/marmilixLogo1.png"
               alt="Marmilix Logo"
               width={220}
-              height={0}
-              className="mx-auto mb-0"
+              height={40}
+              className="mx-auto mb-8 mt-20"
               
             />
             <h1 className="text-4xl font-bold mb-4 mt-0">Marmilix Portfolio</h1>
