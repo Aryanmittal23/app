@@ -57,68 +57,10 @@ const features = [
         <video src="/video-main.mp4" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
-
-      {/* <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-4xl mx-auto">
-          {/* Badge 
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-            <Star className="h-4 w-4 text-yellow-400 fill-current" />
-            <span className="text-sm">Premium Quality Since 1985</span>
-          </div>
-
-          {/* Main Headline 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6 tracking-tight">
-            World-Class{" "}
-            <span className="text-yellow-400">Marble</span> &{" "}
-            <span className="text-yellow-400">Granite</span>
-            <br />
-            for Global Projects
-          </h1>
-
-          {/* Subheadline 
-          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-            Transform your spaces with our premium natural stones. From luxury
-            residences to commercial landmarks, we deliver excellence across
-            40+ countries worldwide.
-          </p>
-
-          {/* CTAs 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/products">
-            <button className="flex items-center px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition text-lg">
-              Explore Our Collection
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            </Link>
-            <Link href="/contact">
-            <button className="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition text-lg"> 
-              Request Consultation
-            </button>
-            </Link>
-          </div>
-
-          {/* Stats 
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/20">
-            <div>
-              <div className="text-3xl mb-2">40+</div>
-              <div className="text-sm text-gray-300">Countries Served</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">5000+</div>
-              <div className="text-sm text-gray-300">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">35</div>
-              <div className="text-sm text-gray-300">Years Experience</div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
 
       {/* </section> */}
-
-<section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl font-bold text-gray-900">
             Our Heritage of Excellence
@@ -163,7 +105,52 @@ const features = [
             className="rounded-2xl shadow-lg"
           />
         </div>
-      </section>
+      </section> */}
+      <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <div>
+    <h2 className="text-3xl font-bold text-gray-900">
+      Building Trust with Every Stone
+    </h2>
+    <p className="text-lg text-gray-600 mt-2">
+      A New Beginning in Stone Excellence
+    </p>
+    <div className="mt-6 space-y-6">
+      <div className="flex items-start gap-4">
+        <span className="bg-gray-900 text-white font-bold px-3 py-1 rounded-lg">
+          Quality
+        </span>
+        <p className="text-gray-700">
+          <strong>Premium Selection</strong> – Every stone is carefully <br /> sourced
+          and inspected to ensure unmatched durability, <br />design, and finish.
+        </p>
+      </div>
+      <div className="flex items-start gap-4">
+        <span className="bg-gray-900 text-white font-bold px-3 py-1 rounded-lg">
+          Global
+        </span>
+        <p className="text-gray-700">
+          <strong>Expanding Horizons</strong> – Though new in exports, our <br />
+          vision is to connect with clients across the globe, <br /> delivering trust
+          with every order.
+        </p>
+      </div>
+    </div>
+    <Link href="/about">
+      <button className="mt-8 px-5 py-3 border rounded-lg hover:bg-gray-100 cursor-pointer">
+        Learn More About Us
+      </button>
+    </Link>
+  </div>
+  <div>
+    <Image
+      src="/Luxury-Private-Residence.jpeg"
+      alt="Luxury Private Residence"
+      width={600}
+      height={400}
+      className="rounded-2xl shadow-lg"
+    />
+  </div>
+</section>
 
 
       {/* Featured Products Section */}
@@ -219,13 +206,9 @@ const features = [
           </Link>
         </div>
     </section>
-        
-      
 
       {/* Heritage Section */}
-      
-
-      <section className="bg-gray-50 py-16 px-6">
+    <section className="bg-gray-50 py-16 px-6">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
         <p className="text-gray-600 mb-12">

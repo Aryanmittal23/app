@@ -16,17 +16,16 @@ export default function BlogDetailPage() {
   if (!blog) return <p className="p-8">Blog not found</p>;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 mt-20  ">
+    <div className="max-w-5xl mx-auto px-4 py-12 mt-12">
       {/* Main Blog */}
       
-      <article className="mb-16 ">
-        
+      <article className="mb-10 ">
         <Image
           src={blog.image}
           alt={blog.title}
           width={900}
-          height={500}
-          className="rounded-2xl shadow-lg object-cover w-full mb-8"
+          height={600}
+          className="rounded-xl shadow-lg object-cover mb-8 w-full h-[600px]"
         />
         
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{blog.title}</h1>

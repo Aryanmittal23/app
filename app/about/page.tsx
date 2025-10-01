@@ -29,10 +29,8 @@ export default function AboutPage() {
   ];
 
   return (
-    <>
-    
+    <>  
 <div className="px-6 md:px-20 py-12 space-y-16 mt-15">
-
 {/* Founder Video */}
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
@@ -126,106 +124,11 @@ export default function AboutPage() {
           ))}
         </div>
       </motion.div>
-
-      
     </div>
     
     <main className="bg-white text-gray-900">
-
-        {/* Heritage Banner */}
-      {/* <section className="bg-gray-900 text-white py-20 text-center">
-        <h2 className="text-4xl font-bold mb-4">Our Heritage of Excellence</h2>
-        <p className="text-lg text-gray-300 mb-6">Three Decades of Stone Mastery</p>
-        <button className="bg-yellow-600 px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition">
-          Since 1990 • Premium Natural Stones
-        </button>
-      </section> */}
-
-      {/* Founder’s Message */}
-{/* <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-  {/* Message Text 
-  <div className="md:w-1/2">
-    <h2 className="text-3xl font-bold mb-4">Message from Our Founder</h2>
-    <p className="text-gray-700 mb-4">
-      At Marmilix, our journey has always been about combining traditional craftsmanship with
-      modern innovation. We strive to deliver the highest quality natural stones to clients
-      around the world while preserving the beauty and authenticity of each piece.
-    </p>
-    <p className="text-gray-700">
-      – Aryan Mittal, Founder
-    </p>
-  </div>
-
-  {/* Video 
-  <div className="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
-    <video
-      src="/founder-message.mp4"
-      controls
-      className="w-full h-auto rounded-lg"
-    />
-  </div>
-</section> */}
-
-       {/* Story of Excellence */}
-      {/* <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Our Story of Excellence</h2>
-        <p className="text-gray-700 mb-6">
-          Founded in 1990 in the heart of Rajasthan, Marmilix began as a small family
-          business with a simple vision: to share the extraordinary beauty of Indian
-          natural stones with the world.
-        </p>
-        <p className="text-gray-700 mb-6">
-          Over three decades, we have grown from a local stone supplier to a globally
-          recognized export company, serving clients across 40+ countries. Our journey
-          has been built on unwavering commitment to quality, authenticity, and the
-          timeless craft of stone mastery.
-        </p>
-        <p className="text-gray-700">
-          Today, Marmilix stands at the intersection of traditional craftsmanship and
-          modern technology, ensuring every piece we export meets the highest
-          international standards while preserving natural beauty.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          <Image src="/about-page.jpeg" alt="Team" width={400} height={250} className="rounded-lg" />
-          <Image src="/Luxury-Private-Residence.jpeg" alt="Factory" width={400} height={250} className="rounded-lg" />
-          <Image src="/Luxury-Private-Residence.jpeg" alt="Worker" width={400} height={250} className="rounded-lg" />
-          <Image src="/Luxury-Private-Residence.jpeg" alt="Containers" width={400} height={250} className="rounded-lg" />
-        </div>
-      </section> */}
-
-      {/* Core Values */}
-      {/* <section className="bg-gray-100 py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
-        <p className="text-gray-600 mb-10">
-          The principles that guide everything we do, from sourcing to delivery.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-yellow-600 mb-2">Uncompromising Quality</h3>
-            <p className="text-gray-600">
-              Every piece is carefully selected, processed, and quality-checked to
-              exceed expectations.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-yellow-600 mb-2">Rich Heritage</h3>
-            <p className="text-gray-600">
-              Since 1990, Marmilix has been at the forefront of natural stone exports,
-              blending craftsmanship with technology.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-yellow-600 mb-2">Global Trust</h3>
-            <p className="text-gray-600">
-              Serving clients in 40+ countries with commitment to quality,
-              authenticity, and timely delivery.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       {/* Expert Team */}
-      <section className="py-16 px-6 text-center">
+      {/* <section className="py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Meet Our Expert Team</h2>
         <p className="text-gray-600 mb-10">
           Dedicated professionals bringing decades of expertise to every project
@@ -258,10 +161,10 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Impact in Numbers */}
-      <section className="bg-gray-900 text-white py-16 px-6 text-center">
+      {/* <section className="bg-gray-900 text-white py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-10">Our Impact in Numbers</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           <div>
@@ -281,22 +184,22 @@ export default function AboutPage() {
             <p className="text-gray-300">Client Satisfaction</p>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Hero Section */}
-      <section className="text-center py-16 px-6">
-        <h2 className="text-4xl font-bold mb-4">Experience the Marmilix Difference</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-          Join thousands of satisfied clients who trust <b className="text-black">Marmilix</b> for their
+      <section className="text-center py-16 px-6 bg-gray-900">
+        <h2 className="text-4xl font-bold mb-4 text-white">Experience the Marmilix Difference</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6 text-white">
+          Join thousands of satisfied clients who trust <b className="text-white">Marmilix</b> for their
           premium natural stone needs.
         </p>
         <div className="flex justify-center gap-4">
           <Link href="/contact">
-            <button className="bg-yellow-600 text-white px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition cursor-pointer">
+            <button className="bg-yellow-500 text-gray-800 px-6 py-3 rounded-md font-medium hover:bg-yellow-600 transition cursor-pointer">
               Start Your Project
             </button>
           </Link>
           <Link href="/products">
-          <button className="border border-gray-400 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition cursor-pointer">
+          <button className="border border-gray-400 bg-white px-6 py-3 rounded-md font-medium hover:bg-gray-200 transition cursor-pointer">
             View Our Products
           </button>
           </Link>

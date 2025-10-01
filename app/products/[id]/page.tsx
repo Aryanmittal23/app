@@ -21,9 +21,9 @@ export default function ProductDetailPage() {
         <Image
           src={product.image}
           alt={product.name}
-          width={600}
+          width={550}
           height={400}
-          className="rounded-2xl shadow-lg object-cover w-full"
+          className="rounded-xl shadow-lg object-cover w-[550px] h-[400px]"
         />
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>

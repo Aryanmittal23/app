@@ -63,7 +63,7 @@ const router = useRouter()
         <div className="relative z-10">
           <h1 className="text-4xl font-bold">Get In Touch</h1>
           <p className="mt-2 text-lg">Let&apos;s Discuss Your Project</p>
-          <button className="mt-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded-full">
+          <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded-full">
             Available 24/7 for International Clients
           </button>
         </div>
@@ -158,19 +158,20 @@ const router = useRouter()
             <h3 className="font-bold text-lg">Visit Our Office</h3>
             <p className="text-gray-600 mt-2">
               Marmilix <br />
-              City of Shiv, Sheopur <br />
-              Madhya Pradesh, India - 476337
+              Baroda road, Sheopur <br />
+              Madhya Pradesh - India <br />
+              476337
             </p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h3 className="font-bold text-lg">Call Us</h3>
             <p className="text-gray-600 mt-2">
-              +91-8109663368 {/*<br /> +91-81096-63368 */}
+              +91 8109663368 {/*<br /> +91-81096-63368 */}
             </p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h3 className="font-bold text-lg">Email Us</h3>
-            <p className="text-gray-600 mt-2">info@marmilix.com</p>
+            <a href="mailto:info@marmilix.com"className="text-gray-600 mt-2 cursor-pointer">info@marmilix.com</a>
           </div>
         </div>
       </section>
@@ -187,20 +188,6 @@ const router = useRouter()
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      {/* <div>
-          <h2 className="text-2xl font-bold mb-4">Why Visit Our Showroom?</h2>
-          <ul className="space-y-3 text-gray-700">
-            <li>✅ Touch & Feel Quality</li>
-            <li>✅ Expert Consultation</li>
-            <li>✅ Facility Tour</li>
-            <li>✅ Custom Solutions</li>
-          </ul>
-          <a href="https://www.google.com/maps?q=Sheopur,+Madhya+Pradesh,+India" className="text-black">
-          <button className="mt-6 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800">
-            Get Directions
-          </button>
-          </a>
-        </div> */}
       </section>
 
       {/* FAQ */}
@@ -211,11 +198,9 @@ const router = useRouter()
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white shadow-lg rounded-lg p-6">
-              <h3 className="font-bold">What is your minimum order quantity?</h3>
+              <h3 className="font-bold">Do you offer custom sizes and finishes?</h3>
               <p className="text-gray-600 mt-2">
-                Our minimum order quantity is typically 100 square meters for
-                most stone varieties. However, smaller orders can be accommodated
-                with adjusted pricing.
+                Yes, we provide customized sizes, thickness, and finishes as per client requirements.
               </p>
             </div>
             <div className="bg-white shadow-lg rounded-lg p-6">

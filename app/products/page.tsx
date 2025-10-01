@@ -130,7 +130,7 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-black text-white py-12 text-center">
+      <section className="bg-gray-900 text-white py-12 text-center">
         <h2 className="text-2xl font-bold">
           Can’t Find What You’re Looking For?
         </h2>

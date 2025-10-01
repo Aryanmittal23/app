@@ -98,7 +98,7 @@ export default function OurStoryPage() {
           </p>
           <a
             href="mailto:info@marmilix.com"
-            className="bg-white text-gray-900 px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-gray-200 transition"
+            className="bg-white text-black px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-200 transition"
           >
             Connect With Us
           </a>

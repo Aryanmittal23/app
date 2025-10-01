@@ -1,14 +1,39 @@
 "use client"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { CheckCircle, Globe, Award, Layers } from "lucide-react"
+import { CheckCircle,Award, Layers } from "lucide-react"
 import { portfolioData } from "../data/portfolio/portfolio" // adjust path based on your folder structure
+import { Shield, Gem, Globe, Users } from "lucide-react";
+import React from "react"
+
 
 export default function PortfolioPage() {
+  const features = [
+      {
+        icon: <Shield className="w-10 h-10 text-yellow-600" />,
+        title: "Trusted Quality",
+        desc: "We deliver premium marble & granite with strict quality standards for every project.",
+      },
+      {
+        icon: <Gem className="w-10 h-10 text-yellow-600" />,
+        title: "Unique Designs",
+        desc: "Exclusive stone patterns & textures that add unmatched beauty to your spaces.",
+      },
+      {
+        icon: <Globe className="w-10 h-10 text-yellow-600" />,
+        title: "Global Reach",
+        desc: "Supplying our products across India and worldwide with reliable logistics.",
+      },
+      {
+        icon: <Users className="w-10 h-10 text-yellow-600" />,
+        title: "Client Focused",
+        desc: "We believe in long-term relationships and provide personalized solutions.",
+      },
+    ];
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="relative bg-gray-100 py-20">
+      <section className="relative bg-gray-100 py-10">
         <div className="max-w-6xl mx-auto text-center px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -19,11 +44,11 @@ export default function PortfolioPage() {
               src="/marmilixLogo1.png"
               alt="Marmilix Logo"
               width={220}
-              height={80}
-              className="mx-auto mb-6"
-              priority
+              height={0}
+              className="mx-auto mb-0"
+              
             />
-            <h1 className="text-4xl font-bold mb-4">Marmilix Portfolio</h1>
+            <h1 className="text-4xl font-bold mb-4 mt-0">Marmilix Portfolio</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Transforming spaces worldwide with premium marble and granite.
             </p>
@@ -36,8 +61,8 @@ export default function PortfolioPage() {
         <h2 className="text-3xl font-semibold mb-6 text-center">About Marmilix</h2>
         <p className="text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
           At Marmilix, we specialize in providing world-class marble and granite solutions that redefine
-          luxury and elegance. With over three decades of experience, we have delivered premium stonework
-          for hotels, residences, and commercial projects across the globe. Our commitment to quality,
+          luxury and elegance. We have delivered premium stonework
+          for hotels, residences, and commercial projects. Our commitment to quality,
           craftsmanship, and client satisfaction sets us apart in the industry.
         </p>
       </section>
@@ -74,26 +99,30 @@ export default function PortfolioPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-center mb-10">Why Choose Marmilix</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-          <div>
-            <Layers className="mx-auto w-10 h-10 text-gray-800 mb-3" />
-            <h4 className="font-semibold">Premium Quality</h4>
-            <p className="text-gray-600">Sourcing only the finest stones worldwide.</p>
-          </div>
-          <div>
-            <Globe className="mx-auto w-10 h-10 text-gray-800 mb-3" />
-            <h4 className="font-semibold">Global Reach</h4>
-            <p className="text-gray-600">Supplying to luxury projects across continents.</p>
-          </div>
-          <div>
-            <CheckCircle className="mx-auto w-10 h-10 text-gray-800 mb-3" />
-            <h4 className="font-semibold">Customer Focus</h4>
-            <p className="text-gray-600">Commitment to long-term client satisfaction.</p>
-          </div>
-        </div>
-      </section>
+      <section className="bg-gray-50 py-16 px-6">
+            <div className="max-w-7xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
+              <p className="text-gray-600 mb-12">
+                Discover what makes <span className="font-semibold">Marmilix</span> your trusted partner in marble & granite solutions.
+              </p>
+      
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+                  >
+                    {/* <div className="flex justify-center mb-4 text-gray-900">{feature.icon}</div> */}
+                    <div className="flex justify-center mb-4">
+        {React.cloneElement(feature.icon, { className: "w-10 h-10 text-gray-700" })}
+      </div>
+                    <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
       {/* Contact Section */}
       <section className="bg-gray-900 text-white py-20">
@@ -104,9 +133,9 @@ export default function PortfolioPage() {
           </p>
           <a
             href="mailto:info@marmilix.com"
-            className="bg-white text-gray-900 px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-gray-200 transition"
+            className="bg-white text-black px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-200 transition"
           >
-            Contact Us
+            Connect With Us
           </a>
         </div>
       </section>
