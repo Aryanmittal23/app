@@ -62,8 +62,8 @@ export default function Footer() {
   const footerLinks = {
     Company: [
       { name: "About Us", href: "/about" },
-      { name: "Our Story", href: "/our-story" },
-      // { name: "Careers", href: "#" },
+      { name: "Blog", href: "/blog" },
+      //  { name: "Our Story", href: "/our-story" },
       // { name: "Press", href: "#" },
     ],
     Products: [
